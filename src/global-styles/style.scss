@@ -7,9 +7,266 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+.spotify-container__header{
+ 
+  & &__bg{
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 538px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/images/unnamed.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+& &__bar{
+  position:fixed;
+  display: flex;
+  z-index: 1;
+  top:0;
+  width:100%;
+  height:84px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+& &__nav{
+  display: flex;
+  
+}
+& &__nav-arrows-panel{
+  display:flex;
+  align-items: center;
+  gap:24px;
+  margin-left:50px;
+}
+& &__nav-left-arrow{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor:not-allowed;
+}
+& &__nav-right-arrow{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform:rotate(180deg);
+  cursor:not-allowed;
+}
+& &__nav-user-profile{
+  background: rgba(0, 0, 0, 0.7);
+  width:177px;
+  height:46px;
+  border-radius: 50px;
+  position:absolute;
+  right:0;
+  margin-right:50px;
+  margin-top:18px;
+  display: flex;
+  align-items: center;
+}
+& &__nav-user-profile img{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display: flex;
+  margin:3px 12px 3px 3px;
+  cursor:pointer;
+  
+}
+& &__nav-user-profile p{
+  color:white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;  
+}
+& &__text-section{
+  position:absolute;
+  margin: 156px 0px 50px 50px;
+
+}
+& &__text-section p:nth-child(1){
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white);
+}
+& &__text-section h1{
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 100%;
+  color: var(--white);
+  
+
+}
+& &__text-section span{
+  display: block;
+}
+& &__text-section p:nth-child(3){
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color:var(--header-gray);
 }
 
-p {
-  color: var(--color-on-surface);
+}
+.spotify-container__content{
+  
+  height:100vh;
+  width:100vw;
+  background-color: var(--cool-black);
+  display: flex;
+  flex-direction: column;
+  padding-top:538px;
+}
+.spotify-container__content-options{
+  display: flex;
+  gap:32px;
+  margin:32px 0px 32px 50px;
+  width: 207px;
+  height: 59px;
+  & &__play{
+    width:59px;
+    height:59px;
+    background-color: var(--spoti-green);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+  }
+  & &__heart{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+  }
+  & &__more-options{
+    display: flex;
+    align-items: center;  
+    cursor:pointer;
+  }
+}
+.spotify-container__content-playlist{
+  padding:0 50px;
+  gap:16px;
+  display: flex;
+  flex-direction: column;
+  & &__song{
+    background-color: var(--blue-black);
+    height:89px;
+    border-radius: 17px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-right:440px;
+  }
+  & &__song-active{
+    background:#292929;
+    padding-right:0px;  
+  }
+  & &__song-id-and-img{
+    margin-left:65px;
+    margin-right:65px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #BFBFBF;
+    gap:50px;
+  }
+  & &__song-album-and-song-name{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 6px;
+    
+  }
+  & &__song-album-and-song-name p:nth-child(1){
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin:0;
+    color:var(--header-gray);
+    margin:0;
+  }
+  & &__song-album-and-song-name p:nth-child(2){
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color:var(--white);
+    margin:0;
+  }
+  & &__song-artist{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 6px;
+   
+  }
+  & &__song-artist p:nth-child(1){
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin:0;
+    color:var(--header-gray);
+    margin:0;
+  }
+  & &__song-artist p:nth-child(2){
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color:var(--white);
+    margin:0;
+    
+  }
+  & &__song-time{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 6px;
+  }
+  & &__song-time p:nth-child(1){
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin:0;
+    color:var(--header-gray);
+    margin:0;
+  }
+  & &__song-time p:nth-child(2){
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color:var(--white);
+    margin:0; 
+  }
+  & &__song-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:18px;
+    margin-right:50px;
+  }
+  & &__song-options img:nth-child(1){
+    width:24px;
+    height:24px;
+    margin:0;
+  }
+  & &__song-options img:nth-child(2){
+    width:36px;
+    height:36px;
+    margin:0;
+  }
 }

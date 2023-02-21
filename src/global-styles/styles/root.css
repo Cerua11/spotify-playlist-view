@@ -1,0 +1,13 @@
+:root {
+  --black: #000;
+  --black70: rgba(0,0,0,0.7);
+  --black50: rgba(0,0,0,0.5);
+  --black20: rgba(0,0,0,0.2);
+  --cool-black: #121212;
+  --blue-black: #18181C;
+  --content-container: #1F1F1F;
+  --gray: #292929;
+  --header-gray: #BFBFBF;
+  --white: #fff;
+  --spoti-green: #65D36E;
+}/*# sourceMappingURL=root.css.map */
